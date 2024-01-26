@@ -1,0 +1,101 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:296409946397:task-definition/sam-dev-taskDefinitionBanner:1",
+    "containerDefinitions": [
+        {
+            "name": "sam-dev-containerBanner",
+            "image": "296409946397.dkr.ecr.us-east-1.amazonaws.com/sam-dev-ecr-banner:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 3005,
+                    "hostPort": 3005,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [
+                {
+                    "sourceVolume": "fs-0979ec31563509e7b",
+                    "containerPath": "/mnt/efs"
+                }
+            ],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/sam-devTaskDefinitionBanner",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
+        }
+    ],
+    "family": "sam-dev-taskDefinitionBanner",
+    "taskRoleArn": "arn:aws:iam::296409946397:role/sam-dev-ECStaskRole",
+    "executionRoleArn": "arn:aws:iam::296409946397:role/sam-dev-ECSexecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [
+        {
+            "name": "fs-0979ec31563509e7b",
+            "host": {}
+        }
+    ],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "2048",
+    "registeredAt": "2023-04-28T16:12:31.321Z",
+    "registeredBy": "arn:aws:sts::296409946397:assumed-role/AWSReservedSSO_PDS_SAMQA_CLEVERIT_1918d386fd29a702/ext.juan.olivieri@uss.cl",
+    "tags": []
+}
